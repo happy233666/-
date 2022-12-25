@@ -1,0 +1,16 @@
+a
+CREATE TABLE `user` (
+`user_id` int(10) NOT NULL AUTO_INCREMENT,
+`username` varchar(20) DEFAULT NULL,
+`password` varchar(20) DEFAULT NULL,
+PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+CREATE TABLE `book` (
+`book_id` int(10) NOT NULL AUTO_INCREMENT,
+`state` varchar(20) DEFAULT NULL,
+`user_id` int(10) DEFAULT NULL,
+`time` int(10) DEFAULT NULL
+PRIMARY KEY (`book_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+b
+预编译语句的优势在于归纳为：一次编译、多次运行，省去了解析优化等过程；此外预编译语句能防止 SQL 注入。
